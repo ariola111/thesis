@@ -1,0 +1,88 @@
+%%%%%%%%%%%%%%%%%%%
+%  placeholders
+%%%%%%%%%%%%%%%%%%%
+
+% chair name not allowed at Department of Informatics
+% remove \phantom{} if you want the chair name on the cover
+\newcommand{\chair}{\phantom{Lehrstuhl f\"ur Musterverfahren}}
+\newcommand{\faculty}{Fakult\"at f\"ur Informatik}
+\newcommand{\uni}{Technische Universit\"at M\"unchen}
+\newcommand{\studycourse}{Robotics, Cognition, Intelligence}
+
+\newcommand{\authorname}{Ariola Lami}
+\newcommand{\city}{Munich}
+
+\newcommand{\worktype}{Master's Thesis in \studycourse}
+\newcommand{\titleFirstLanguage}{Engineering a State Diagram Editor for Optimal Developer Experience}
+% German & English needed at Department of Informatics
+\newcommand{\titleForeignLanguage}{Entwicklung eines Zustandsdiagramm-Editors f\"ur optimale Entwicklererfahrung}
+
+\newcommand{\supervisor}{Prof. Gudrun Klinker, Ph.D.}
+\newcommand{\advisor}{Daniel Dyrda, M.Sc.}
+
+% set date manually or use \today
+\newcommand{\submissionDate}{\today}
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%    settings
+%%%%%%%%%%%%%%%%%%%
+
+% quick settings
+\def\printstyle{oneside} % set to {twoside} for printing, else {oneside}
+%\def\monochromeCover{} % uncomment if you prefer a black \dfrac{\dfrac{TUM}{den}}{den} logo on the cover
+\def\monochromeCoverInside{} % uncomment if you prefer a black TUM logo on the inside cover page
+
+% complete settings & packages: see settings.text
+\input{settings} 
+
+
+
+%%%%%%%%%%%%%%%%%%%
+%  main document
+%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\frontmatter
+% first part of document before actual content
+
+\include{titlepage}
+\include{titlepage_inside} % needed at Department of Informatics
+
+\include{content/EidesstattlicheErklaerung}
+\include{content/Abstract}
+\include{content/Acknowledgements}
+
+\tableofcontents 
+
+
+\mainmatter
+% include chapter files here or write your text directly here
+
+\include{content/Introduction}
+\include{content/RelatedWork}
+\include{content/Methodology}
+\include{content/Discussion}
+\include{content/Conclusions}
+
+
+\backmatter
+% optional: list of figures
+\listoffigures
+% optional: list of tables
+\listoftables
+% optional: list of source code listings
+\lstlistoflistings
+
+% your BibTex file
+\bibliography{bib/references.bib}
+
+
+\appendix
+% include appendix chapters here
+
+\include{content/AppendixExample}
+
+\end{document}
